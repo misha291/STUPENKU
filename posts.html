@@ -57,20 +57,21 @@
         <h1>Наші пости</h1>
         
     </main>
-    <section id="posts">
-        <article class="post">
-            <h2>Заголовок поста</h2>
-            <img src="image1.jpg" alt="Фото поста" class="post-image">
-            <p>Текст поста...</p>
+      <div class="form-container">
+        <form action="submit_post.php" method="POST" enctype="multipart/form-data">
+            <label for="title">Заголовок поста:</label>
+            <input type="text" id="title" name="title" required>
 
-            <section class="comments">
-                <h3>Комментарии</h3>
-                <div class="comment">
-                    <p><strong>Пользователь 1:</strong> Это замечательный пост!</p>
-                </div>
-                <div class="comment">
-                    <p><strong>Пользователь 2:</strong> Спасибо за информацию!</p>
-                </div>
+            <label for="content">Текст поста:</label>
+            <textarea id="content" name="content" rows="5" required></textarea>
+
+            <label for="image">Выберите изображение:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+
+            <button type="submit">Опубликовать пост</button>
+        </form>
+    </div>
+
                 
                 <!-- Форма для добавления комментария -->
                 <form action="/submit-comment" method="POST">

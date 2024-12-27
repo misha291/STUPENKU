@@ -57,10 +57,13 @@
         <h1>Наші пости</h1>
         
     </main>
-      <div class="form-container">
-        <form action="submit_post.php" method="POST" enctype="multipart/form-data">
-            <img scr="https://github.com/misha291/STUPENKU/blob/main/img/photo_2024-12-27_21-45-11.jpg?raw=true">
-            <p>Команда Стамина (STMN) и Люминости (LG) покидают Бравл Старс и с 27-31 будет последний шанс преобрести их косметику: Аватарка, Пин, Спрей.</p>
+      <div class="post-form">
+        <h1>Создать новый пост</h1>
+        <form action="/submit-post" method="POST" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="Заголовок поста" required><br>
+            <textarea name="content" rows="5" placeholder="Содержимое поста" required></textarea><br>
+            <input type="file" name="image" accept="image/*"><br>
+            <button type="submit">Опубликовать</button>
         </form>
     </div>
     <footer>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пости</title>
+    <link rel="stylesheet" href="style.css">
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 0 auto;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="posts.html">Пости</a></li>
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="contact.html">Клуби</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Наші пости</h1>
+        
+    </main>
+     <div class="form-container">
+        <form action="submit_post.php" method="POST" enctype="multipart/form-data">
+            <label for="title">Заголовок поста:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="content">Текст поста:</label>
+            <textarea id="content" name="content" rows="5" required></textarea>
+
+            <label for="image">Выберите изображение:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+
+            <button type="submit">Опубликовать пост</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2024 СТУПЕНЬКИ </p>
+    </footer>
+</body>
+</html>

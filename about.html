@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стилизация слайдера */
+        .slider-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slider img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        .next {
+            right: 0;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="posts.html">Пости</a></li>
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="contact.html">Клуби</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Про нас</h1>
+        <p></p>
+    </main>
+
+    <footer>
+        <p>© 2024 СТУПЕНЬКИ</p>
+    </footer>
+</body>
+<body>
+    <main>
+        <h1>Доброго часу!</h1>
+        <p>Це-сайт клану СТУПЕНЬКИ. Тут ви знайдете інформацію про наші клани, побачите наші пости і ще багато чого!</p>
+        <p>Наша історія та доп. інфа.</p>
+        <p>З 23.05.2024 до 26.12.2024 часу ми зробили 11 кланів 5 з яких вже находяться в топі України.</p>
+
+<div class="slider-container">
+        <div class="slider">
+            <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_1_2024-12-26_18-23-02.jpg?raw=true" alt="Image 1">
+            <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_3_2024-12-26_18-23-02.jpg?raw=true" alt="Image 2">
+            <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_2_2024-12-26_18-23-02.jpg?raw=true" alt="Image 3">
+            <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_5_2024-12-26_18-23-02.jpg?raw=true" alt="Image 4">
+            <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_4_2024-12-26_18-23-02.jpg?raw=true" alt="Image 5">
+            <!-- Добавьте сюда другие изображения -->
+        </div>
+
+        <!-- Кнопки для перехода к предыдущему и следующему изображению -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slider img');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        const slider = document.querySelector('.slider');
+
+        function showImage(index) {
+            if (index >= images.length) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = images.length - 1;
+            }
+            const offset = -currentIndex * 100;
+            slider.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex--;
+            showImage(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex++;
+            showImage(currentIndex);
+        });
+
+        // Изначально показываем первое изображение
+        showImage(currentIndex);
+    </script>
+
+        <p>В наших планах це створити 50 кланів які будуть в топах України!</p>
+        <p>В нас є телеграмм канал в якому ми часто виставляємо пости і халяву! А іноді ми робимо розіграші.</p>
+        <p>Ще в нас є группа в телеграммі де ви зможете знайти собі команду, друзів та просто побалакати.</p>
+    </main>
+</body>
+</html>

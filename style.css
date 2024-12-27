@@ -47,3 +47,27 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+h1 {
+    text-align: center;
+}
+
+.post {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.comment {
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}

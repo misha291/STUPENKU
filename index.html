@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Головна сторінка</title>
     <link rel="stylesheet" href="style.css">
-      <style>
+    <style>
         /* Сброс отступов по умолчанию */
         * {
             margin: 0;
@@ -122,8 +121,7 @@
                 width: 100%; /* На мобильных устройствах изображения занимают всю ширину */
             }
         }
-    </style>
-    <style>
+
         /* Стили для стрелки */
         #scrollToTop {
             position: fixed;
@@ -144,23 +142,11 @@
             background-color: #0056b3;
         }
 
-        /* Дополнительные стили страницы */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
-            padding: 0;
-            min-height: 100vh;
-            padding-bottom: 40px; /* Пространство внизу для кнопки */
-        }
-        
+        /* Пространство для контента, чтобы кнопка не перекрывала контент */
         main {
-            height: 2000px; /* Примерная высота для прокрутки */
-            padding: 20px;
+            padding-bottom: 80px;
         }
     </style>
-
 </head>
 <body>
 
@@ -179,31 +165,7 @@
     <main>
         <h1>Вітаємо на головній сторінці!</h1>
         <p>Це основна сторінка нашого сайту, де ви знайдете інформацію про всі наші клуби "СТУПЕНЬКИ".</p>
-           <!-- Кнопка стрелки -->
-    <button id="scrollToTop">&#8593;</button>
-
-    <script>
-        // Получаем кнопку стрелки
-        const scrollToTopButton = document.getElementById("scrollToTop");
-
-        // Показать или скрыть кнопку в зависимости от прокрутки страницы
-        window.onscroll = function() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollToTopButton.style.display = "block";
-            } else {
-                scrollToTopButton.style.display = "none";
-            }
-        };
-
-        // Плавный скролл наверх
-        scrollToTopButton.onclick = function() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        };
-    </script>
-
+        
         <h1>Дошка пошани</h1>
         <p>Основники кланів</p>
         
@@ -231,6 +193,30 @@
                 <h2>госпожа, сигма вумен, элита ступенек. женщина мечта и сама скромность</h2>
             </div>
         </div>
+         <!-- Кнопка стрелки -->
+        <button id="scrollToTop">&#8593;</button>
+
+    <script>
+        // Получаем кнопку стрелки
+        const scrollToTopButton = document.getElementById("scrollToTop");
+
+        // Показать или скрыть кнопку в зависимости от прокрутки страницы
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        };
+
+        // Плавный скролл наверх
+        scrollToTopButton.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
 
         <h1>учасники кланів</h1>
 

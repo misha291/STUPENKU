@@ -46,8 +46,7 @@
             right: 0;
             transform: translateY(-50%);
         }
-    </style>
-     <style>
+
         /* Сброс стандартных стилей */
         * {
             margin: 0;
@@ -65,6 +64,71 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+            color: white; /* Цвет текста */
+            text-align: center; /* Центрируем текст */
+        }
+
+        h1, p {
+            /* Добавляем тень для текста, чтобы улучшить его видимость */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Стили для блока с контентом */
+        .main-content {
+            background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%; /* Устанавливаем ширину блока */
+            max-width: 800px; /* Максимальная ширина */
+        }
+
+        /* Медиазапросы для мобильных устройств */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px; /* Добавляем немного отступов */
+            }
+
+            .slider-container {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .slider img {
+                max-height: 300px; /* Ограничиваем высоту изображений */
+            }
+
+            .prev, .next {
+                font-size: 20px; /* Уменьшаем размер кнопок */
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 24px; /* Уменьшаем размер заголовка */
+            }
+
+            p {
+                font-size: 14px; /* Уменьшаем размер текста для параграфов */
+            }
+        }
+
+        /* Медиазапросы для планшетов */
+        @media (max-width: 900px) {
+            .slider-container {
+                max-width: 90%;
+            }
+
+            .slider img {
+                max-height: 400px; /* Ограничиваем высоту изображений для планшетов */
+            }
+
+            h1 {
+                font-size: 28px; /* Увеличиваем размер заголовка на планшетах */
+            }
+
+            p {
+                font-size: 16px; /* Увеличиваем размер текста для параграфов */
+            }
         }
     </style>
 </head>
@@ -79,38 +143,26 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main-content">
         <h1>Про нас</h1>
-        <p></p>
-    </main>
-
-    <footer>
-        <p>© 2024 СТУПЕНЬКИ</p>
-    </footer>
-</body>
-<body>
-    <main>
-        <h1>Доброго часу!</h1>
         <p>Це-сайт клану СТУПЕНЬКИ. Тут ви знайдете інформацію про наші клани, побачите наші пости і ще багато чого!</p>
         <p>Наша історія та доп. інфа.</p>
         <p>З 23.05.2024 до 26.12.2024 часу ми зробили 11 кланів 5 з яких вже находяться в топі України.</p>
 
-<div class="slider-container">
-        <div class="slider">
-            <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_1_2024-12-26_18-23-02.jpg?raw=true" alt="Image 1">
-            <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_3_2024-12-26_18-23-02.jpg?raw=true" alt="Image 2">
-            <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_2_2024-12-26_18-23-02.jpg?raw=true" alt="Image 3">
-            <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_5_2024-12-26_18-23-02.jpg?raw=true" alt="Image 4">
-            <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_4_2024-12-26_18-23-02.jpg?raw=true" alt="Image 5">
-            <!-- Добавьте сюда другие изображения -->
+        <div class="slider-container">
+            <div class="slider">
+                <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_1_2024-12-26_18-23-02.jpg?raw=true" alt="Image 1">
+                <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_3_2024-12-26_18-23-02.jpg?raw=true" alt="Image 2">
+                <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_2_2024-12-26_18-23-02.jpg?raw=true" alt="Image 3">
+                <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_5_2024-12-26_18-23-02.jpg?raw=true" alt="Image 4">
+                <img src="https://github.com/misha291/STUPENKU/blob/main/img/photo_4_2024-12-26_18-23-02.jpg?raw=true" alt="Image 5">
+            </div>
+
+            <!-- Кнопки для перехода к предыдущему и следующему изображению -->
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
         </div>
-
-        <!-- Кнопки для перехода к предыдущему и следующему изображению -->
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-    </div>
-
-    <script>
+           <script>
         let currentIndex = 0;
         const images = document.querySelectorAll('.slider img');
         const prevButton = document.querySelector('.prev');
@@ -145,5 +197,9 @@
         <p>В нас є телеграмм канал в якому ми часто виставляємо пости і халяву! А іноді ми робимо розіграші.</p>
         <p>Ще в нас є группа в телеграммі де ви зможете знайти собі команду, друзів та просто побалакати.</p>
     </main>
+
+    <footer>
+        <p>© 2024 СТУПЕНЬКИ</p>
+    </footer>
 </body>
 </html>
